@@ -21,6 +21,12 @@
             "iAvatar777\\avatarPay\\": "src"
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "config": {
         "process-timeout": 1800
     }
