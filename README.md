@@ -26,7 +26,7 @@ https://api.processing.i-am-avatar.com
 Для вызова функции используй конструкцию:
 
 ```
-/** @var \iAvatar777\avatarPay\avatarPay  $provider */
+/** @var \iAvatar777\avatarPay\AvatarPay  $provider */
 $provider = Yii::$app->AvatarPay;
 $provider->call(...);
 ```
