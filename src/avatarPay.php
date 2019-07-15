@@ -36,12 +36,16 @@ class AvatarPay extends Component
         $login = $this->key;
         $secret = $this->secret;
         $hash = hash('sha256', ($secret . ((int)(time()/100))));
-        $request = $c
-            ->post($path, $data)
-            ->addHeaders([
-                'X-API-KEY'    => $login,
-                'X-API-SECRET' => $hash,
-            ]);
+        if ($method == 'post') {
+            $request = $c->post($path, $data);
+        } else {
+            $request = $c->get($path, $data);
+        }
+        $request->addHeaders([
+            'X-API-KEY'    => $login,
+            'X-API-SECRET' => $hash,
+        ]);
+
         $response = $request->send();
 
         if ($response->headers['http-code'] != 200) {
@@ -53,5 +57,31 @@ class AvatarPay extends Component
         }
 
         return $data['result'];
+    }
+
+    /**
+     * @param string    $path
+     * @param array     $data
+     *
+     * @return mixed
+     *
+     * @throws
+     */
+    public function callPost($path, $data = [])
+    {
+        return $this->_call('post', $path, $data);
+    }
+
+    /**
+     * @param string    $path
+     * @param array     $data
+     *
+     * @return mixed
+     *
+     * @throws
+     */
+    public function callGet($path, $data = [])
+    {
+        return $this->_call('get', $path, $data);
     }
 }
