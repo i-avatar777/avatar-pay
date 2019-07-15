@@ -14,7 +14,7 @@ use yii\httpclient\Client;
 /**
  * v 1.0
  */
-class avatarPay extends Component
+class AvatarPay extends Component
 {
     public $key;
     public $secret;
