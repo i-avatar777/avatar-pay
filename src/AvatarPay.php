@@ -56,7 +56,7 @@ class AvatarPay extends Component
             throw new \Exception($data['error']);
         }
 
-        return $data['result'];
+        return $data['data'];
     }
 
     /**
