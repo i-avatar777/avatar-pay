@@ -16,6 +16,11 @@
         "yiisoft/yii2-jui": "*",
         "yiisoft/yii2-faker": "*"
     },
+    "autoload": {
+        "psr-4": {
+            "iAvatar777\\avatarPay\\": "src"
+        }
+    },
     "config": {
         "process-timeout": 1800
     }
