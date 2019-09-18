@@ -4,7 +4,6 @@ namespace iAvatar777\avatarPay;
 
 use yii\base\Component;
 use yii\base\Exception;
-use yii\base\Object;
 use yii\helpers\Json;
 use yii\helpers\StringHelper;
 use Yii;
