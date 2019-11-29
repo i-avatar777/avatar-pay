@@ -5,7 +5,7 @@
     "keywords": ["avatarPay"],
     "type": "project",
     "license": "BSD-3-Clause",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev-master",
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "*"
